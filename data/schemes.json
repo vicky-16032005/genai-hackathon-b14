@@ -14,12 +14,34 @@
       "department": "Ministry of Housing and Urban Affairs",
       "category": "Housing",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PMAY-U is the Government of India's flagship urban housing mission aiming to provide pucca houses with basic amenities to all eligible urban households. It delivers a Credit Linked Subsidy on home loans and direct assistance for construction of houses for the Economically Weaker Sections, Low Income Groups and Middle Income Groups.",
       "benefits": "Interest subsidy of 3% to 6.5% on home loans under the Credit Linked Subsidy Scheme (CLSS); central assistance of up to Rs 1.5 lakh per EWS house for Beneficiary Led Construction and Affordable Housing in Partnership verticals.",
       "eligibility_text": "Applicant family (husband, wife and unmarried children) must not own a pucca house anywhere in India. The household must belong to EWS (annual income up to Rs 3 lakh), LIG (Rs 3-6 lakh) or MIG (Rs 6-18 lakh). The property should be in a statutory town as per Census 2011. A woman member should be a co-owner for the EWS/LIG verticals.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": 1800000, "gender": "any", "target_groups": ["general", "ews", "lig", "mig", "woman_head"], "urban_focus": true},
-      "documents_needed": ["Aadhaar card", "Income certificate", "Bank account details", "Proof of residence", "Property documents / allotment", "Caste certificate (if applicable)"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": 1800000,
+        "gender": "any",
+        "target_groups": [
+          "general",
+          "ews",
+          "lig",
+          "mig",
+          "woman_head"
+        ],
+        "urban_focus": true
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Income certificate",
+        "Bank account details",
+        "Proof of residence",
+        "Property documents / allotment",
+        "Caste certificate (if applicable)"
+      ],
       "how_to_apply": "Apply online at the PMAY-U portal, through a Common Service Centre (CSC), or at the Urban Local Body office. Aadhaar is mandatory for the application.",
       "application_link": "https://pmaymis.gov.in/",
       "source": "pmaymis.gov.in"
@@ -30,12 +52,26 @@
       "department": "Ministry of Housing and Urban Affairs",
       "category": "Urban Infrastructure / Water & Sanitation",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "AMRUT 2.0 aims to make cities water secure and self-reliant through universal coverage of water supply and sewerage/septage management in urban local bodies. It is an infrastructure mission implemented by city governments rather than an individual-benefit transfer.",
       "benefits": "Functional household tap connections, sewerage and septage coverage, rejuvenation of water bodies, and development of green spaces and parks in covered cities.",
       "eligibility_text": "AMRUT is a city-level infrastructure scheme; benefits accrue to all residents of covered urban local bodies. Individual citizens benefit indirectly through new water and sewerage connections. Households can request a tap or sewer connection through their municipal corporation.",
-      "eligibility": {"min_age": null, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["general"], "urban_focus": true},
-      "documents_needed": ["Proof of residence", "Property tax receipt or ownership proof (for new connection request)"],
+      "eligibility": {
+        "min_age": null,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "general"
+        ],
+        "urban_focus": true
+      },
+      "documents_needed": [
+        "Proof of residence",
+        "Property tax receipt or ownership proof (for new connection request)"
+      ],
       "how_to_apply": "Citizens approach their Urban Local Body / Municipal Corporation water supply department for new tap or sewerage connections under the mission.",
       "application_link": "https://amrut.gov.in/",
       "source": "mohua.gov.in/cms/amrut.php"
@@ -46,12 +82,29 @@
       "department": "Ministry of Housing and Urban Affairs",
       "category": "Sanitation",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "SBM-U 2.0 works towards making all cities garbage-free and ensuring grey and black water management. It provides assistance for construction of individual household latrines and community toilets, and supports door-to-door waste collection and processing.",
       "benefits": "Incentive of up to Rs 4,000 (central share) per Individual Household Latrine for eligible urban households without access to a toilet; access to community and public toilets; improved solid waste management.",
       "eligibility_text": "Urban households that do not have access to an individual toilet are eligible for the Individual Household Latrine incentive. Priority is given to households below the poverty line and those in informal settlements.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["general", "bpl"], "urban_focus": true},
-      "documents_needed": ["Aadhaar card", "Proof of urban residence", "Bank account details", "Photograph of the site (before/after for incentive release)"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": 600000,
+        "gender": "any",
+        "target_groups": [
+          "general",
+          "bpl"
+        ],
+        "urban_focus": true
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Proof of urban residence",
+        "Bank account details",
+        "Photograph of the site (before/after for incentive release)"
+      ],
       "how_to_apply": "Apply through the Urban Local Body or the Swachhata portal/app; the incentive is released in instalments after verification of toilet construction.",
       "application_link": "https://sbmurban.org/",
       "source": "swachhbharatmission.gov.in"
@@ -62,12 +115,25 @@
       "department": "Ministry of Housing and Urban Affairs",
       "category": "Urban Infrastructure",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "The Smart Cities Mission drives economic growth and improves quality of life through area-based development and smart, technology-enabled solutions in 100 selected cities. Projects include integrated command and control centres, smart mobility, e-governance, and public Wi-Fi.",
       "benefits": "Citizen-facing smart services such as integrated grievance redressal, smart transport, public Wi-Fi, smart street lighting, and e-governance portals delivered by the city Special Purpose Vehicle.",
       "eligibility_text": "This is a city-development mission. All residents of the 100 selected Smart Cities benefit from the public services and digital infrastructure created. There is no individual application; citizens use the services and grievance portals set up by the city SPV.",
-      "eligibility": {"min_age": null, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["general"], "urban_focus": true},
-      "documents_needed": ["None for using public services"],
+      "eligibility": {
+        "min_age": null,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "general"
+        ],
+        "urban_focus": true
+      },
+      "documents_needed": [
+        "None for using public services"
+      ],
       "how_to_apply": "Use the city's Smart City portal, app, or Integrated Command and Control Centre services; there is no individual enrolment.",
       "application_link": "https://smartcities.gov.in/",
       "source": "smartcities.gov.in"
@@ -78,12 +144,25 @@
       "department": "Ministry of Electronics and Information Technology",
       "category": "Digital Services",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "Digital India delivers government services digitally through platforms like UMANG, DigiLocker, and the Common Service Centre network, bringing services to citizens' doorsteps and reducing the need to visit government offices.",
       "benefits": "Access to 1,700+ government services via the UMANG app, secure digital documents via DigiLocker, and assisted e-services at 5 lakh+ Common Service Centres.",
       "eligibility_text": "All Indian citizens can use Digital India services. DigiLocker and UMANG require a mobile number linked to Aadhaar. CSC services are available to anyone in urban and rural areas.",
-      "eligibility": {"min_age": null, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["general"], "urban_focus": false},
-      "documents_needed": ["Aadhaar-linked mobile number (for DigiLocker/UMANG)"],
+      "eligibility": {
+        "min_age": null,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar-linked mobile number (for DigiLocker/UMANG)"
+      ],
       "how_to_apply": "Download the UMANG or DigiLocker app and register with an Aadhaar-linked mobile number, or visit a nearby Common Service Centre.",
       "application_link": "https://www.digitalindia.gov.in/",
       "source": "digitalindia.gov.in"
@@ -94,12 +173,27 @@
       "department": "Ministry of Housing and Urban Affairs",
       "category": "Livelihood / Microcredit",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PM SVANidhi is a micro-credit scheme for urban street vendors to help them resume and grow their businesses. It offers collateral-free working capital loans with an interest subsidy and rewards for digital transactions.",
       "benefits": "Collateral-free working capital loan starting at Rs 10,000, increasing to Rs 20,000 and Rs 50,000 on timely repayment; 7% interest subsidy; cashback of up to Rs 1,200 a year for digital transactions.",
       "eligibility_text": "Urban street vendors who were vending on or before 24 March 2020 and possess a Certificate of Vending or an identity card issued by the Urban Local Body are eligible. Vendors identified in surveys but left out are also covered through a provisional certificate.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["street_vendor"], "urban_focus": true},
-      "documents_needed": ["Certificate of Vending / ULB identity card", "Aadhaar card", "Bank account details"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "street_vendor"
+        ],
+        "urban_focus": true
+      },
+      "documents_needed": [
+        "Certificate of Vending / ULB identity card",
+        "Aadhaar card",
+        "Bank account details"
+      ],
       "how_to_apply": "Apply through the PM SVANidhi portal, a CSC, or a lending bank/MFI; the Urban Local Body verifies vendor status.",
       "application_link": "https://pmsvanidhi.mohua.gov.in/",
       "source": "pmsvanidhi.mohua.gov.in"
@@ -110,12 +204,31 @@
       "department": "Ministry of Housing and Urban Affairs",
       "category": "Livelihood / Self-employment",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "DAY-NULM reduces poverty and vulnerability of urban poor households by enabling access to self-employment, skill training, and shelter. It supports the formation of Self-Help Groups (SHGs) of urban poor women and provides interest-subsidised loans for self-employment.",
       "benefits": "Skill training, interest subvention on self-employment loans (individual up to Rs 2 lakh, group up to Rs 10 lakh), SHG bank linkage, and shelters for the urban homeless.",
       "eligibility_text": "Urban poor households, especially women, street vendors, and the homeless. SHG members must be from urban poor families. Self-employment loan applicants should typically be 18 years or older.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["general", "bpl", "woman_head", "entrepreneur"], "urban_focus": true},
-      "documents_needed": ["Aadhaar card", "Proof of urban residence", "Bank account details", "BPL/income documentation if available"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": 300000,
+        "gender": "any",
+        "target_groups": [
+          "general",
+          "bpl",
+          "woman_head",
+          "entrepreneur"
+        ],
+        "urban_focus": true
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Proof of urban residence",
+        "Bank account details",
+        "BPL/income documentation if available"
+      ],
       "how_to_apply": "Approach the City Mission Management Unit of the Urban Local Body or a registered SHG; banks process the subsidised loans.",
       "application_link": "https://nulm.gov.in/",
       "source": "nulm.gov.in"
@@ -126,12 +239,28 @@
       "department": "Ministry of Health and Family Welfare / National Health Authority",
       "category": "Health Insurance",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PM-JAY is the world's largest health assurance scheme providing a cover for secondary and tertiary care hospitalisation to poor and vulnerable families. It is cashless and paperless at empanelled public and private hospitals.",
       "benefits": "Health cover of Rs 5 lakh per family per year for secondary and tertiary hospitalisation; cashless treatment at empanelled hospitals across India.",
       "eligibility_text": "Eligibility is based on the deprivation and occupational criteria of the Socio-Economic Caste Census (SECC) 2011 for rural and urban areas. Families identified as deprived in the SECC database are automatically eligible; there is no age cap. Eligibility can be checked on the PM-JAY portal using a mobile number.",
-      "eligibility": {"min_age": null, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["general", "bpl"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Ration card", "Mobile number for eligibility check"],
+      "eligibility": {
+        "min_age": null,
+        "max_age": null,
+        "max_annual_income": 500000,
+        "gender": "any",
+        "target_groups": [
+          "general",
+          "bpl"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Ration card",
+        "Mobile number for eligibility check"
+      ],
       "how_to_apply": "Check eligibility at pmjay.gov.in or call 14555; get the Ayushman card made at an empanelled hospital or CSC.",
       "application_link": "https://pmjay.gov.in/",
       "source": "pmjay.gov.in"
@@ -142,12 +271,29 @@
       "department": "Ministry of Petroleum and Natural Gas",
       "category": "Energy / Women Welfare",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PMUY provides clean cooking fuel (LPG) to women from poor households, replacing traditional polluting cooking fuels and protecting their health.",
       "benefits": "A free LPG connection with a deposit-free cylinder and first refill and stove support; subsidy on refills for eligible beneficiaries.",
       "eligibility_text": "An adult woman from a poor household who does not already have an LPG connection in the household. Beneficiaries are drawn from SECC and other poor-household categories such as SC/ST, PMAY beneficiaries, and Antyodaya Anna Yojana families.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "female", "target_groups": ["bpl", "woman_head"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card of the woman applicant", "Bank account details", "Ration card / proof of poor-household category", "Address proof"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": 1000000,
+        "gender": "female",
+        "target_groups": [
+          "bpl",
+          "woman_head"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card of the woman applicant",
+        "Bank account details",
+        "Ration card / proof of poor-household category",
+        "Address proof"
+      ],
       "how_to_apply": "Apply at any LPG distributor (Indane, Bharat Gas, HP Gas) or online via the PMUY portal.",
       "application_link": "https://www.pmuy.gov.in/",
       "source": "pmuy.gov.in"
@@ -158,12 +304,30 @@
       "department": "Ministry of Finance / MUDRA Ltd",
       "category": "Business Loan / Self-employment",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PMMY provides collateral-free institutional finance to non-corporate, non-farm micro and small enterprises through MUDRA loans in three categories - Shishu, Kishore and Tarun.",
       "benefits": "Collateral-free loans up to Rs 10 lakh: Shishu (up to Rs 50,000), Kishore (Rs 50,000 to Rs 5 lakh), and Tarun (Rs 5 lakh to Rs 10 lakh) for micro enterprises.",
       "eligibility_text": "Any Indian citizen who has a business plan for a non-farm income-generating activity such as manufacturing, trading or services, and whose credit need is up to Rs 10 lakh. Applicants approach banks, NBFCs or MFIs.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["entrepreneur", "general"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "PAN card", "Business plan / quotation", "Bank account details", "Proof of business address"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "entrepreneur",
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "PAN card",
+        "Business plan / quotation",
+        "Bank account details",
+        "Proof of business address"
+      ],
       "how_to_apply": "Apply at any bank, NBFC or MFI, or through the Udyamimitra portal.",
       "application_link": "https://www.mudra.org.in/",
       "source": "mudra.org.in"
@@ -174,12 +338,31 @@
       "department": "Ministry of Finance / Department of Financial Services",
       "category": "Business Loan / Entrepreneurship",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "Stand-Up India facilitates bank loans to Scheduled Caste, Scheduled Tribe and women entrepreneurs to set up greenfield enterprises in manufacturing, services or trading.",
       "benefits": "Bank loan between Rs 10 lakh and Rs 1 crore to at least one SC/ST borrower and one woman borrower per bank branch for setting up a new enterprise.",
       "eligibility_text": "SC/ST and/or women entrepreneurs above 18 years setting up a greenfield (first-time) enterprise. For non-individual enterprises, at least 51% of the shareholding must be held by an SC/ST or woman entrepreneur.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["entrepreneur", "sc_st", "woman_head"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "PAN card", "Caste certificate (for SC/ST)", "Project report", "Proof of business address"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "entrepreneur",
+          "sc_st",
+          "woman_head"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "PAN card",
+        "Caste certificate (for SC/ST)",
+        "Project report",
+        "Proof of business address"
+      ],
       "how_to_apply": "Apply through the Stand-Up India portal or directly at a bank branch; the Lead District Manager can assist.",
       "application_link": "https://www.standupmitra.in/",
       "source": "standupmitra.in"
@@ -190,12 +373,28 @@
       "department": "Ministry of Finance / PFRDA",
       "category": "Pension / Social Security",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "APY is a guaranteed pension scheme for citizens of the unorganised sector. Subscribers receive a fixed monthly pension after the age of 60 based on their contributions.",
       "benefits": "Guaranteed minimum monthly pension of Rs 1,000 to Rs 5,000 after age 60, depending on the contribution and the age at joining.",
       "eligibility_text": "Any Indian citizen between 18 and 40 years of age with a savings bank account can join. Income-tax payers have been excluded from joining since October 2022. Contributions continue until age 60.",
-      "eligibility": {"min_age": 18, "max_age": 40, "max_annual_income": null, "gender": "any", "target_groups": ["unorganised_worker", "general"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Savings bank account", "Mobile number"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": 40,
+        "max_annual_income": 700000,
+        "gender": "any",
+        "target_groups": [
+          "unorganised_worker",
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Savings bank account",
+        "Mobile number"
+      ],
       "how_to_apply": "Enrol through your bank or post office where you hold a savings account, or via net banking.",
       "application_link": "https://www.npscra.nsdl.co.in/scheme-details.php",
       "source": "npscra.nsdl.co.in"
@@ -206,12 +405,27 @@
       "department": "Ministry of Finance / Department of Posts",
       "category": "Savings / Girl Child Welfare",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "SSY is a small-deposit savings scheme for the girl child under the Beti Bachao Beti Padhao initiative, offering an attractive interest rate and income-tax benefits to encourage savings for a daughter's education and marriage.",
       "benefits": "High fixed interest rate (revised quarterly), tax benefits under Section 80C, and a maturity corpus payable to the girl. Deposits range from Rs 250 to Rs 1.5 lakh per year.",
       "eligibility_text": "An account can be opened by the natural or legal guardian for a girl child below the age of 10 years. A maximum of two accounts are allowed per family (one per girl child). The account matures 21 years from opening.",
-      "eligibility": {"min_age": 0, "max_age": 10, "max_annual_income": null, "gender": "female", "target_groups": ["girl_child"], "urban_focus": false},
-      "documents_needed": ["Birth certificate of the girl child", "Aadhaar / ID of guardian", "Address proof of guardian"],
+      "eligibility": {
+        "min_age": 0,
+        "max_age": 10,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "girl_child"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Birth certificate of the girl child",
+        "Aadhaar / ID of guardian",
+        "Address proof of guardian"
+      ],
       "how_to_apply": "Open an account at any post office or authorised bank branch with the girl child's birth certificate.",
       "application_link": "https://www.indiapost.gov.in/Financial/pages/content/sukanya-samriddhi-account.aspx",
       "source": "indiapost.gov.in"
@@ -222,12 +436,29 @@
       "department": "Ministry of Labour and Employment",
       "category": "Social Security / Workers",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "e-Shram registers unorganised workers and issues a Universal Account Number (UAN) card, creating a single database to deliver social security and welfare benefits to gig workers, construction workers, street vendors and other informal-sector workers.",
       "benefits": "A 12-digit Universal Account Number (UAN) card; accidental insurance cover of up to Rs 2 lakh; and a gateway to future social-security benefits for registered workers.",
       "eligibility_text": "Any unorganised worker aged 16 to 59 years who is not a member of EPFO/ESIC and is not an income-tax payer. Includes construction workers, migrant workers, gig and platform workers, street vendors, domestic workers and agricultural workers.",
-      "eligibility": {"min_age": 16, "max_age": 59, "max_annual_income": null, "gender": "any", "target_groups": ["unorganised_worker", "street_vendor", "general"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Aadhaar-linked mobile number", "Bank account details"],
+      "eligibility": {
+        "min_age": 16,
+        "max_age": 59,
+        "max_annual_income": 700000,
+        "gender": "any",
+        "target_groups": [
+          "unorganised_worker",
+          "street_vendor",
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Aadhaar-linked mobile number",
+        "Bank account details"
+      ],
       "how_to_apply": "Self-register free at the e-Shram portal or at a nearby CSC.",
       "application_link": "https://eshram.gov.in/",
       "source": "eshram.gov.in"
@@ -238,12 +469,29 @@
       "department": "Ministry of Micro, Small and Medium Enterprises",
       "category": "Artisans / Skill & Credit",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PM Vishwakarma provides end-to-end support to traditional artisans and craftspeople who work with their hands and tools, covering skill training, modern tools, collateral-free credit, and marketing support.",
       "benefits": "Skill training with a stipend of Rs 500 per day; a toolkit incentive of Rs 15,000; collateral-free credit up to Rs 1 lakh (first tranche) and Rs 2 lakh (second tranche) at a concessional 5% interest; and a PM Vishwakarma certificate and ID.",
       "eligibility_text": "Artisans and craftspeople engaged in one of 18 recognised trades (such as carpenter, blacksmith, goldsmith, potter, cobbler, tailor, barber, mason). The applicant must be at least 18 years old and engaged in the trade on the date of registration. One member per family; government employees are excluded.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["artisan", "entrepreneur"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Mobile number", "Bank account details", "Proof of trade / occupation"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "artisan",
+          "entrepreneur"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Mobile number",
+        "Bank account details",
+        "Proof of trade / occupation"
+      ],
       "how_to_apply": "Register through a Common Service Centre using Aadhaar-based biometric authentication; verification is done by the ULB/Gram Panchayat.",
       "application_link": "https://pmvishwakarma.gov.in/",
       "source": "pmvishwakarma.gov.in"
@@ -254,12 +502,29 @@
       "department": "Ministry of Rural Development (National Social Assistance Programme)",
       "category": "Pension / Social Welfare",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "IGNOAPS, a component of the National Social Assistance Programme, provides a monthly pension to elderly persons belonging to below-poverty-line households, including those living in urban areas.",
       "benefits": "Monthly central pension of Rs 200 for beneficiaries aged 60-79 years and Rs 500 for those 80 years and above (states usually top this up).",
       "eligibility_text": "The applicant must be 60 years or older and belong to a Below Poverty Line (BPL) household as per the state's BPL list.",
-      "eligibility": {"min_age": 60, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["senior_citizen", "bpl"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Age proof", "BPL card / income certificate", "Bank account details"],
+      "eligibility": {
+        "min_age": 60,
+        "max_age": null,
+        "max_annual_income": 200000,
+        "gender": "any",
+        "target_groups": [
+          "senior_citizen",
+          "bpl"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Age proof",
+        "BPL card / income certificate",
+        "Bank account details"
+      ],
       "how_to_apply": "Apply at the ULB/Gram Panchayat or through the state social welfare department; many states accept applications on the NSAP portal or Seva Sindhu (Karnataka).",
       "application_link": "https://nsap.nic.in/",
       "source": "nsap.nic.in"
@@ -270,12 +535,27 @@
       "department": "Ministry of Finance",
       "category": "Insurance / Social Security",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PMSBY is a low-cost accidental death and disability insurance scheme renewable annually, aimed at bringing the uninsured population under an insurance safety net.",
       "benefits": "Accidental death or total permanent disability cover of Rs 2 lakh (Rs 1 lakh for partial disability) for a premium of just Rs 20 per year.",
       "eligibility_text": "Any individual aged 18 to 70 years with a savings bank account who consents to auto-debit of the premium is eligible.",
-      "eligibility": {"min_age": 18, "max_age": 70, "max_annual_income": null, "gender": "any", "target_groups": ["general"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Savings bank account", "Consent for auto-debit"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": 70,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Savings bank account",
+        "Consent for auto-debit"
+      ],
       "how_to_apply": "Enrol through your bank's net banking, branch, or the Jan Dhan / bank account auto-debit consent form.",
       "application_link": "https://www.jansuraksha.gov.in/",
       "source": "jansuraksha.gov.in"
@@ -286,12 +566,27 @@
       "department": "Ministry of Finance",
       "category": "Insurance / Social Security",
       "level": "Central",
-      "applicable_states": ["All India"],
+      "applicable_states": [
+        "All India"
+      ],
       "summary": "PMJJBY is a one-year renewable life-insurance scheme offering life cover for death due to any reason, targeted at the uninsured and lower-income population.",
       "benefits": "Life insurance cover of Rs 2 lakh on death due to any reason, for an annual premium of Rs 436.",
       "eligibility_text": "Any individual aged 18 to 50 years with a savings bank account who consents to auto-debit of the premium is eligible; cover continues up to age 55 if joined in time and renewed.",
-      "eligibility": {"min_age": 18, "max_age": 50, "max_annual_income": null, "gender": "any", "target_groups": ["general"], "urban_focus": false},
-      "documents_needed": ["Aadhaar card", "Savings bank account", "Consent for auto-debit"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": 50,
+        "max_annual_income": null,
+        "gender": "any",
+        "target_groups": [
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Aadhaar card",
+        "Savings bank account",
+        "Consent for auto-debit"
+      ],
       "how_to_apply": "Enrol through your bank's net banking, branch, or auto-debit consent form.",
       "application_link": "https://www.jansuraksha.gov.in/",
       "source": "jansuraksha.gov.in"
@@ -302,12 +597,27 @@
       "department": "Government of Karnataka - Department of Women and Child Development",
       "category": "Women Welfare / Direct Benefit",
       "level": "State",
-      "applicable_states": ["Karnataka"],
+      "applicable_states": [
+        "Karnataka"
+      ],
       "summary": "Gruha Lakshmi is a Karnataka state guarantee scheme that provides a monthly cash transfer to the woman head of every eligible family to strengthen women's financial security.",
       "benefits": "Rs 2,000 per month transferred directly to the bank account of the woman identified as the head of the family in the ration card.",
       "eligibility_text": "The woman must be the head of the family as listed in an Antyodaya, BPL or APL ration card in Karnataka. Women whose family members are GST-registered or income-tax payers are excluded.",
-      "eligibility": {"min_age": 18, "max_age": null, "max_annual_income": null, "gender": "female", "target_groups": ["woman_head"], "urban_focus": false},
-      "documents_needed": ["Ration card (showing applicant as head of family)", "Aadhaar card", "Bank account details (Aadhaar-linked preferred)"],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": null,
+        "max_annual_income": 1000000,
+        "gender": "female",
+        "target_groups": [
+          "woman_head"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "Ration card (showing applicant as head of family)",
+        "Aadhaar card",
+        "Bank account details (Aadhaar-linked preferred)"
+      ],
       "how_to_apply": "Register through the Seva Sindhu portal or at Gram One / Bangalore One / Karnataka One centres.",
       "application_link": "https://sevasindhugs.karnataka.gov.in/",
       "source": "sevasindhu.karnataka.gov.in"
@@ -318,12 +628,27 @@
       "department": "Government of Karnataka - Food and Civil Supplies Department",
       "category": "Food Security",
       "level": "State",
-      "applicable_states": ["Karnataka"],
+      "applicable_states": [
+        "Karnataka"
+      ],
       "summary": "Anna Bhagya is a Karnataka food-security guarantee scheme that provides free foodgrains to below-poverty-line families to ensure nutritional security.",
       "benefits": "Free rice / foodgrain entitlement per person per month to eligible BPL (Antyodaya and Priority Household) families; where rice is short-supplied, an equivalent cash transfer is made.",
       "eligibility_text": "Families holding an Antyodaya Anna Yojana (AAY) or Priority Household (BPL) ration card in Karnataka are eligible.",
-      "eligibility": {"min_age": null, "max_age": null, "max_annual_income": null, "gender": "any", "target_groups": ["bpl", "general"], "urban_focus": false},
-      "documents_needed": ["BPL / Antyodaya ration card", "Aadhaar card linked to ration card"],
+      "eligibility": {
+        "min_age": null,
+        "max_age": null,
+        "max_annual_income": 200000,
+        "gender": "any",
+        "target_groups": [
+          "bpl",
+          "general"
+        ],
+        "urban_focus": false
+      },
+      "documents_needed": [
+        "BPL / Antyodaya ration card",
+        "Aadhaar card linked to ration card"
+      ],
       "how_to_apply": "Eligibility is automatic for valid BPL ration-card holders; collect foodgrains at the linked Fair Price Shop or receive the cash transfer.",
       "application_link": "https://ahara.kar.nic.in/",
       "source": "ahara.kar.nic.in"

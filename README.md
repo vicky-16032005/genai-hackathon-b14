@@ -1,12 +1,12 @@
 ---
 title: Smart City Scheme RAG Portal
 emoji: 🏛️
-colorFrom: orange
+colorFrom: yellow
 colorTo: green
-sdk: streamlit
-app_file: app.py
+sdk: docker
+app_port: 7860
 pinned: true
-short_description: Citizen RAG portal for govt schemes — English + Kannada (PS-SC4, B14)
+short_description: Govt scheme RAG portal — English + Kannada (PS-SC4)
 ---
 
 # 🏙️ Smart City Government Scheme & Services RAG Portal

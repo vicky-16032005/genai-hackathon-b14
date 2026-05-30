@@ -5,6 +5,7 @@ results are exact and verifiable — no LLM hallucination. Every matched scheme
 is returned with its official link and source as a citation.
 """
 import json
+from functools import lru_cache
 from pathlib import Path
 
 from . import config
@@ -28,6 +29,7 @@ INTEREST_MAP = {
 ALL_INTERESTS = list(INTEREST_MAP.keys())
 
 
+@lru_cache(maxsize=1)
 def _load():
     return json.loads(Path(config.SCHEMES_JSON).read_text())["schemes"]
 
@@ -48,10 +50,12 @@ def check(age: int | None, annual_income: int | None, state: str = "All India",
         reasons, fails = [], []
 
         # ---- hard filters ----
+        # State gate: national ("All India") schemes show everywhere; a
+        # state-specific scheme shows ONLY when the user picked that exact state.
         states = s.get("applicable_states", [])
-        if state and state != "All India" and "All India" not in states and state not in states:
-            continue  # scheme not available in the citizen's state
-        if state != "All India" and state in states:
+        if "All India" not in states:
+            if state == "All India" or state not in states:
+                continue  # state-specific scheme; user's state doesn't match
             reasons.append(f"Available in {state}")
 
         sg = el.get("gender", "any")
