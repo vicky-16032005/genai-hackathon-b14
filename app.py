@@ -107,12 +107,21 @@ with st.sidebar:
     st.markdown("### ⚙️ Advanced")
     top_k = st.slider("Passages to retrieve (k)", 3, 10, config.TOP_K)
     st.divider()
+    # runtime-accurate stack labels (correct for both local Ollama and cloud Groq)
+    if config.LLM_PROVIDER == "groq":
+        _gen = f"Groq · `{config.GROQ_MODEL}`"
+    elif config.LLM_PROVIDER == "transformers":
+        _gen = f"`{config.HF_GEN_MODEL}` · transformers"
+    else:
+        _gen = f"`{config.GEN_MODEL}` · Ollama"
+    _retr = ("fine-tuned MiniLM (ours)" if Path(config.ST_EMBED_MODEL).exists()
+             else "MiniLM (base)")
     st.markdown(
         "**Stack — small & deployable**\n\n"
-        f"- LLM `{config.GEN_MODEL}` · {config.LLM_PROVIDER}\n"
-        "- Retriever: fine-tuned MiniLM (ours)\n"
+        f"- LLM: {_gen}\n"
+        f"- Retriever: {_retr}\n"
         "- FAISS + metadata · LangChain\n\n"
-        "✅ No paid APIs · deployable"
+        "✅ No paid APIs"
     )
     st.caption("PS-SC4 · Team B14 · KLE Tech")
 
@@ -290,5 +299,7 @@ with tab_elig:
             render_scheme_cards(show, False)
 
 st.divider()
+_backend = {"groq": "Groq", "transformers": "Transformers"}.get(config.LLM_PROVIDER, "Ollama")
+_locality = "fully local" if config.LLM_PROVIDER == "ollama" else "free hosted LLM + local retrieval"
 st.caption("Smart City Government Scheme & Services RAG Portal · PS-SC4 · Team B14 · "
-           "KLE Tech GenAI Hackathon 2025 · Ollama + FAISS, fully local.")
+           f"KLE Tech GenAI Hackathon 2025 · {_backend} + FAISS · {_locality} · no paid APIs.")
