@@ -26,6 +26,12 @@ HF_GEN_MODEL = os.getenv("HF_GEN_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")  # transf
 # stronger local model (e.g. qwen3.5:9b) for credible, generator-independent scoring.
 JUDGE_MODEL = os.getenv("JUDGE_MODEL", GEN_MODEL)
 
+# Groq — free, very fast hosted API (Llama 3.x). Used when LLM_PROVIDER=groq
+# (great for cloud deploy: instant answers on CPU hosts). Not OpenAI.
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_BASE_URL = os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1")
+
 # Embeddings — pluggable. 'st' = our fine-tuned sentence-transformers retriever
 # (deployable, ~90MB, CPU); 'ollama' = nomic-embed-text fallback.
 EMBED_PROVIDER = os.getenv("EMBED_PROVIDER", "st")

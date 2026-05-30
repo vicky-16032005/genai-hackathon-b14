@@ -72,8 +72,29 @@ def _hf_chat(prompt: str, system: str) -> str:
     return _clean(tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True))
 
 
+# --------------------------------------------------------------------------- #
+#  Groq backend (free, fast hosted API — OpenAI-compatible)
+# --------------------------------------------------------------------------- #
+def _groq_chat(prompt: str, system: str) -> str:
+    import requests
+    msgs = ([{"role": "system", "content": system}] if system else []) + \
+           [{"role": "user", "content": prompt}]
+    resp = requests.post(
+        f"{config.GROQ_BASE_URL}/chat/completions",
+        headers={"Authorization": f"Bearer {config.GROQ_API_KEY}",
+                 "Content-Type": "application/json"},
+        json={"model": config.GROQ_MODEL, "messages": msgs,
+              "temperature": config.TEMPERATURE, "max_tokens": config.NUM_PREDICT},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    return _clean(resp.json()["choices"][0]["message"]["content"])
+
+
 def chat(prompt: str, system: str = "") -> str:
     """Single-turn chat via the configured provider. Returns clean assistant text."""
+    if config.LLM_PROVIDER == "groq":
+        return _groq_chat(prompt, system)
     if config.LLM_PROVIDER == "transformers":
         return _hf_chat(prompt, system)
     return _ollama_chat(prompt, system)
