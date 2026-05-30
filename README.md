@@ -1,3 +1,14 @@
+---
+title: Smart City Scheme RAG Portal
+emoji: 🏛️
+colorFrom: orange
+colorTo: green
+sdk: streamlit
+app_file: app.py
+pinned: true
+short_description: Citizen RAG portal for govt schemes — English + Kannada (PS-SC4, B14)
+---
+
 # 🏙️ Smart City Government Scheme & Services RAG Portal
 
 **Problem statement:** PS-SC4 · **Team:** B14 · **Domain:** Smart Cities & Infrastructure

@@ -8,13 +8,27 @@ Results are persisted in session_state and translated at render time, so the
 language toggle re-renders instantly in the chosen language (no LLM re-run).
 """
 from html import escape as _esc
+from pathlib import Path
 
 import streamlit as st
 
 from src import config, rag, eligibility, translate
 
+
 st.set_page_config(page_title="Smart City Scheme Portal", page_icon="🏛️",
                    layout="wide", initial_sidebar_state="expanded")
+
+
+@st.cache_resource(show_spinner="Building the scheme index…")
+def _ensure_index():
+    """Build the FAISS index on first boot if absent (e.g. fresh cloud deploy)."""
+    if not (Path(config.INDEX_DIR) / "index.faiss").exists():
+        from src import ingest
+        ingest.build_index()
+    return True
+
+
+_ensure_index()
 
 # --------------------------------------------------------------------------- #
 #  Civic / government theme (forced light, India-flag accents)
