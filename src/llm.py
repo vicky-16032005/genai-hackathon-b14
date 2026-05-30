@@ -1,47 +1,79 @@
-"""Thin wrapper over the local Ollama chat model.
+"""Pluggable generation backend.
 
-We call the `ollama` client directly (not langchain's ChatOllama) because the
-Qwen3-family models emit a separate reasoning field that langchain's wrapper
-currently drops, returning empty content. Calling Ollama with think=False gives
-clean, fast, grounded answers. Embeddings still go through langchain (they work).
+  LLM_PROVIDER=ollama       -> fast local small model (default; great for the demo)
+  LLM_PROVIDER=transformers -> self-contained HF model, deploys to HF Spaces /
+                               Streamlit Cloud with no Ollama daemon.
+
+Both return clean text (any stray <think> blocks are stripped).
 """
 import re
 from functools import lru_cache
-
-import ollama
 
 from . import config
 
 _THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL | re.IGNORECASE)
 
 
-@lru_cache(maxsize=1)
-def get_client() -> "ollama.Client":
-    return ollama.Client(host=config.OLLAMA_BASE_URL)
-
-
 def _clean(text: str) -> str:
     return _THINK_RE.sub("", text or "").strip()
 
 
+# --------------------------------------------------------------------------- #
+#  Ollama backend
+# --------------------------------------------------------------------------- #
+@lru_cache(maxsize=1)
+def _ollama_client():
+    import ollama
+    return ollama.Client(host=config.OLLAMA_BASE_URL)
+
+
+def _ollama_chat(prompt: str, system: str) -> str:
+    msgs = ([{"role": "system", "content": system}] if system else []) + \
+           [{"role": "user", "content": prompt}]
+    opts = {"temperature": config.TEMPERATURE, "num_predict": config.NUM_PREDICT}
+    client = _ollama_client()
+    try:  # think=False helps qwen3-family; harmless to attempt, retry without on error
+        return _clean(client.chat(model=config.GEN_MODEL, messages=msgs,
+                                  think=False, options=opts).message.content)
+    except Exception:
+        return _clean(client.chat(model=config.GEN_MODEL, messages=msgs,
+                                  options=opts).message.content)
+
+
+# --------------------------------------------------------------------------- #
+#  Transformers backend (deployable, no Ollama)
+# --------------------------------------------------------------------------- #
+@lru_cache(maxsize=1)
+def _hf():
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    tok = AutoTokenizer.from_pretrained(config.HF_GEN_MODEL)
+    model = AutoModelForCausalLM.from_pretrained(
+        config.HF_GEN_MODEL,
+        torch_dtype=(torch.float16 if torch.backends.mps.is_available()
+                     or torch.cuda.is_available() else torch.float32),
+    )
+    if torch.backends.mps.is_available():
+        model = model.to("mps")
+    elif torch.cuda.is_available():
+        model = model.to("cuda")
+    return tok, model
+
+
+def _hf_chat(prompt: str, system: str) -> str:
+    tok, model = _hf()
+    msgs = ([{"role": "system", "content": system}] if system else []) + \
+           [{"role": "user", "content": prompt}]
+    text = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+    inputs = tok(text, return_tensors="pt").to(model.device)
+    out = model.generate(**inputs, max_new_tokens=config.NUM_PREDICT,
+                         do_sample=config.TEMPERATURE > 0, temperature=max(config.TEMPERATURE, 0.01),
+                         pad_token_id=tok.eos_token_id)
+    return _clean(tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True))
+
+
 def chat(prompt: str, system: str = "") -> str:
-    """Single-turn chat. Returns clean assistant text (reasoning disabled)."""
-    messages = []
-    if system:
-        messages.append({"role": "system", "content": system})
-    messages.append({"role": "user", "content": prompt})
-    try:
-        resp = get_client().chat(
-            model=config.GEN_MODEL,
-            messages=messages,
-            think=False,
-            options={"temperature": config.TEMPERATURE, "num_predict": config.NUM_PREDICT},
-        )
-        return _clean(resp.message.content)
-    except TypeError:
-        # older ollama client without think kwarg
-        resp = get_client().chat(
-            model=config.GEN_MODEL, messages=messages,
-            options={"temperature": config.TEMPERATURE, "num_predict": config.NUM_PREDICT},
-        )
-        return _clean(resp.message.content)
+    """Single-turn chat via the configured provider. Returns clean assistant text."""
+    if config.LLM_PROVIDER == "transformers":
+        return _hf_chat(prompt, system)
+    return _ollama_chat(prompt, system)

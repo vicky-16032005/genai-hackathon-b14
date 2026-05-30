@@ -1,150 +1,150 @@
 {
-  "model": "qwen3.5:9b",
+  "model": "qwen2.5:1.5b",
   "embed_model": "nomic-embed-text",
   "n_queries": 20,
-  "avg_context_recall": 0.872,
-  "avg_answer_relevance": 0.687,
+  "avg_context_recall": 0.994,
+  "avg_answer_relevance": 0.529,
   "retrieval_hit_rate": 1.0,
-  "elapsed_sec": 343.7,
+  "elapsed_sec": 186.9,
   "rows": [
     {
       "id": 1,
       "persona": "Low-income urban family wanting a house",
-      "context_recall": 0.75,
-      "answer_relevance": 0.582,
+      "context_recall": 1.0,
+      "answer_relevance": 0.238,
       "retrieval_hit": true
     },
     {
       "id": 2,
       "persona": "Street vendor needing working capital",
-      "context_recall": 0.667,
-      "answer_relevance": 0.631,
+      "context_recall": 1.0,
+      "answer_relevance": 0.576,
       "retrieval_hit": true
     },
     {
       "id": 3,
       "persona": "Poor woman without cooking gas",
       "context_recall": 1.0,
-      "answer_relevance": 0.761,
+      "answer_relevance": 0.557,
       "retrieval_hit": true
     },
     {
       "id": 4,
       "persona": "Family needing health insurance",
       "context_recall": 1.0,
-      "answer_relevance": 0.733,
+      "answer_relevance": 0.404,
       "retrieval_hit": true
     },
     {
       "id": 5,
       "persona": "65-year-old below poverty line",
-      "context_recall": 0.7,
-      "answer_relevance": 0.74,
+      "context_recall": 1.0,
+      "answer_relevance": 0.663,
       "retrieval_hit": true
     },
     {
       "id": 6,
       "persona": "Parent of a young daughter",
-      "context_recall": 0.8,
-      "answer_relevance": 0.649,
+      "context_recall": 1.0,
+      "answer_relevance": 0.533,
       "retrieval_hit": true
     },
     {
       "id": 7,
       "persona": "30-year-old informal worker wanting pension",
       "context_recall": 1.0,
-      "answer_relevance": 0.748,
+      "answer_relevance": 0.537,
       "retrieval_hit": true
     },
     {
       "id": 8,
       "persona": "Aspiring micro-entrepreneur",
       "context_recall": 1.0,
-      "answer_relevance": 0.723,
+      "answer_relevance": 0.374,
       "retrieval_hit": true
     },
     {
       "id": 9,
       "persona": "SC woman entrepreneur setting up a factory",
-      "context_recall": 0.8,
-      "answer_relevance": 0.632,
+      "context_recall": 1.0,
+      "answer_relevance": 0.612,
       "retrieval_hit": true
     },
     {
       "id": 10,
       "persona": "Traditional carpenter",
-      "context_recall": 0.7,
-      "answer_relevance": 0.714,
+      "context_recall": 0.875,
+      "answer_relevance": 0.562,
       "retrieval_hit": true
     },
     {
       "id": 11,
       "persona": "Gig delivery worker",
       "context_recall": 1.0,
-      "answer_relevance": 0.707,
+      "answer_relevance": 0.413,
       "retrieval_hit": true
     },
     {
       "id": 12,
       "persona": "Worker wanting cheap accident insurance",
-      "context_recall": 0.8,
-      "answer_relevance": 0.514,
+      "context_recall": 1.0,
+      "answer_relevance": 0.474,
       "retrieval_hit": true
     },
     {
       "id": 13,
       "persona": "Person wanting cheap life cover",
-      "context_recall": 0.667,
-      "answer_relevance": 0.685,
+      "context_recall": 1.0,
+      "answer_relevance": 0.517,
       "retrieval_hit": true
     },
     {
       "id": 14,
       "persona": "Household without a toilet",
       "context_recall": 1.0,
-      "answer_relevance": 0.725,
+      "answer_relevance": 0.465,
       "retrieval_hit": true
     },
     {
       "id": 15,
       "persona": "Woman head of family in Karnataka",
-      "context_recall": 0.667,
-      "answer_relevance": 0.699,
+      "context_recall": 1.0,
+      "answer_relevance": 0.712,
       "retrieval_hit": true
     },
     {
       "id": 16,
       "persona": "BPL family in Karnataka needing food",
       "context_recall": 1.0,
-      "answer_relevance": 0.807,
+      "answer_relevance": 0.498,
       "retrieval_hit": true
     },
     {
       "id": 17,
       "persona": "Urban poor woman in a self-help group",
-      "context_recall": 0.889,
-      "answer_relevance": 0.586,
+      "context_recall": 1.0,
+      "answer_relevance": 0.499,
       "retrieval_hit": true
     },
     {
       "id": 18,
       "persona": "Resident wanting a water connection",
       "context_recall": 1.0,
-      "answer_relevance": 0.694,
+      "answer_relevance": 0.559,
       "retrieval_hit": true
     },
     {
       "id": 19,
       "persona": "Citizen wanting digital government services",
       "context_recall": 1.0,
-      "answer_relevance": 0.76,
+      "answer_relevance": 0.621,
       "retrieval_hit": true
     },
     {
       "id": 20,
       "persona": "Citizen curious about the Smart Cities Mission",
       "context_recall": 1.0,
-      "answer_relevance": 0.645,
+      "answer_relevance": 0.764,
       "retrieval_hit": true
     }
   ]

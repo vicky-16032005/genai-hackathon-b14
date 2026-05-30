@@ -22,6 +22,21 @@ from .ingest import get_embeddings
 _emb = None
 
 
+def _judge(prompt: str, system: str = "") -> str:
+    """Run the evaluation judge (config.JUDGE_MODEL via Ollama), independent of
+    the app's generator so eval scores stay credible even with a small generator."""
+    import ollama
+    client = ollama.Client(host=config.OLLAMA_BASE_URL)
+    msgs = ([{"role": "system", "content": system}] if system else []) + \
+           [{"role": "user", "content": prompt}]
+    opts = {"temperature": 0.0, "num_predict": 700}
+    try:
+        r = client.chat(model=config.JUDGE_MODEL, messages=msgs, think=False, options=opts)
+    except Exception:
+        r = client.chat(model=config.JUDGE_MODEL, messages=msgs, options=opts)
+    return llm._clean(r.message.content)
+
+
 def _embed(texts: list[str]) -> list[list[float]]:
     global _emb
     if _emb is None:
@@ -67,7 +82,7 @@ def context_recall(ground_truth: str, contexts: list[str]) -> float:
         "'NO: <statement>' if the CONTEXT does not. Output ONLY these lines.\n\n"
         f"CONTEXT:\n{ctx}\n\nREFERENCE:\n{ground_truth}"
     )
-    out = llm.chat(prompt, system="You are a strict evaluation judge.")
+    out = _judge(prompt, system="You are a strict evaluation judge.")
     yes = no = 0
     for raw in out.splitlines():
         line = _strip_bullet(raw).upper()
@@ -86,7 +101,7 @@ def answer_relevance(question: str, answer: str, n: int = 3) -> float:
         "Output ONE question per line and nothing else.\n\n"
         f"ANSWER:\n{answer}"
     )
-    out = llm.chat(prompt, system="You generate questions for evaluation.")
+    out = _judge(prompt, system="You generate questions for evaluation.")
     gen = []
     for raw in out.splitlines():
         q = _strip_bullet(raw)

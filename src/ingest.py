@@ -8,15 +8,24 @@ is exactly the PS-SC4 deliverable: "ingest ... with scheme-name metadata".
 import json
 from pathlib import Path
 
+from pathlib import Path
+
 from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
-from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from . import config
 
 
-def get_embeddings() -> OllamaEmbeddings:
+def get_embeddings():
+    """Pluggable embeddings. Default: our fine-tuned sentence-transformers retriever
+    (deployable, CPU, no Ollama); falls back to the base MiniLM if not yet trained,
+    or to Ollama nomic-embed-text when EMBED_PROVIDER=ollama."""
+    if config.EMBED_PROVIDER == "st":
+        from langchain_community.embeddings import HuggingFaceEmbeddings
+        model = config.ST_EMBED_MODEL if Path(config.ST_EMBED_MODEL).exists() else config.ST_EMBED_BASE
+        return HuggingFaceEmbeddings(model_name=model)
+    from langchain_ollama import OllamaEmbeddings
     return OllamaEmbeddings(model=config.EMBED_MODEL, base_url=config.OLLAMA_BASE_URL)
 
 

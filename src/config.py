@@ -14,10 +14,24 @@ INDEX_DIR = ROOT / "index"
 SCHEMES_JSON = DATA_DIR / "schemes.json"
 PERSONAS_JSON = DATA_DIR / "personas.json"
 
-# ---- models (100% local via Ollama; no paid APIs — hackathon rule compliant) ----
+# ---- models (small + deployable; no paid APIs — hackathon rule compliant) ----
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-GEN_MODEL = os.getenv("GEN_MODEL", "qwen3.5:9b")          # generation LLM
-EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")  # embeddings
+
+# Generation — pluggable. 'ollama' = fast local small model; 'transformers' =
+# self-contained HF model that deploys to HF Spaces / Streamlit Cloud (no Ollama).
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama")
+GEN_MODEL = os.getenv("GEN_MODEL", "qwen2.5:1.5b")              # small Ollama model (replaces qwen3.5:9b)
+HF_GEN_MODEL = os.getenv("HF_GEN_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")  # transformers backend
+# Evaluation judge — defaults to the generator, but can be overridden with a
+# stronger local model (e.g. qwen3.5:9b) for credible, generator-independent scoring.
+JUDGE_MODEL = os.getenv("JUDGE_MODEL", GEN_MODEL)
+
+# Embeddings — pluggable. 'st' = our fine-tuned sentence-transformers retriever
+# (deployable, ~90MB, CPU); 'ollama' = nomic-embed-text fallback.
+EMBED_PROVIDER = os.getenv("EMBED_PROVIDER", "st")
+ST_EMBED_BASE = os.getenv("ST_EMBED_BASE", "sentence-transformers/all-MiniLM-L6-v2")
+ST_EMBED_MODEL = os.getenv("ST_EMBED_MODEL", str(ROOT / "models" / "scheme-retriever"))
+EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")     # ollama embedding fallback
 
 # ---- retrieval ----
 TOP_K = int(os.getenv("TOP_K", "5"))

@@ -7,11 +7,12 @@
 > "Citizens miss out on welfare schemes because they don't know what exists or
 > whether they qualify. Our Smart City Scheme RAG Portal answers any scheme
 > question with **citations**, in **English and Kannada**, and tells a citizen
-> exactly **which schemes they're eligible for** — running **100% locally**, no
-> paid APIs."
+> exactly **which schemes they're eligible for** — on a **small, deployable, no-paid-API**
+> stack."
 
 ### 0:20 — Deliverable 1: ingestion + corpus (30s)
-- Point to the sidebar: `qwen3.5:9b`, `nomic-embed-text`, FAISS, "No paid APIs".
+- Point to the sidebar: small `qwen2.5:1.5b` generator + our **fine-tuned MiniLM retriever**,
+  FAISS, "No paid APIs · deployable".
 - Mention: **20 urban schemes** ingested with scheme-name metadata (PMAY-U, AMRUT,
   Swachh Bharat, PM SVANidhi, Ayushman Bharat, + Karnataka's Gruha Lakshmi / Anna Bhagya).
 - "`python -m src.ingest` builds the FAISS index in ~2 seconds; drop PDFs into
@@ -39,12 +40,15 @@
 
 ### 4:05 — Deliverable 4: evaluation (40s)
 - Open `data/eval_results.json` (or run `python evaluate.py`).
-- Read out: **avg Context Recall**, **avg Answer Relevance**, **retrieval hit-rate** over
-  **20 citizen-persona queries** — the RAGAS metrics PS-SC4 asks for, computed with local models.
+- Read out: **Context Recall 0.99 · retrieval hit-rate 20/20 · Answer Relevance 0.53**
+  over **20 held-out citizen personas** (RAGAS-style, judged by a held-constant strong model).
+- "And we **trained** a model: our fine-tuned MiniLM retriever lifted Context Recall 0.87 → 0.99
+  and ranking MRR 0.95 → 1.0 (`train/eval_retriever.py`) — and it's a deployable ~90 MB CPU model
+  that drops the Ollama dependency for embeddings."
 
 ### 4:45 — Close (15s)
-> "Citation-accurate, bilingual, eligibility-aware, evaluated — and entirely local
-> and free. Ready to extend to any city's scheme PDFs."
+> "Citation-accurate, bilingual, eligibility-aware, evaluated — and with a trained retriever +
+> a small pluggable LLM, it's small enough to deploy with no paid APIs. Ready for any city's PDFs."
 
 ---
 ## Backup answers if Wi-Fi drops
