@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "description": "20 citizen-persona queries with reference answers for RAGAS-style evaluation (Context Recall + Answer Relevance). PS-SC4 deliverable 4.",
+    "count": 20
+  },
+  "personas": [
+    {"id": 1, "persona": "Low-income urban family wanting a house",
+     "query": "I am a low income city resident and do not own a house. Which scheme helps me buy or build a home and what subsidy do I get?",
+     "expected_schemes": ["PMAY-U"],
+     "ground_truth": "Pradhan Mantri Awas Yojana - Urban (PMAY-U) helps EWS, LIG and MIG urban families who do not own a pucca house. It gives an interest subsidy of 3% to 6.5% on home loans under the Credit Linked Subsidy Scheme and up to Rs 1.5 lakh assistance for EWS houses. Apply at the PMAY-U portal with Aadhaar, income certificate and bank details."},
+
+    {"id": 2, "persona": "Street vendor needing working capital",
+     "query": "I sell vegetables on the street in the city. Is there a government loan for street vendors?",
+     "expected_schemes": ["PM-SVANIDHI"],
+     "ground_truth": "PM SVANidhi gives urban street vendors collateral-free working capital loans starting at Rs 10,000, rising to Rs 20,000 and Rs 50,000 on timely repayment, with a 7% interest subsidy. The vendor needs a Certificate of Vending or ULB identity card, Aadhaar and a bank account, and applies via the PM SVANidhi portal."},
+
+    {"id": 3, "persona": "Poor woman without cooking gas",
+     "query": "How can a poor woman get a free LPG gas connection from the government?",
+     "expected_schemes": ["PMUY"],
+     "ground_truth": "Pradhan Mantri Ujjwala Yojana (PMUY) gives a free LPG connection with a deposit-free cylinder to adult women from poor households who do not already have an LPG connection. Apply at any LPG distributor or the PMUY portal with Aadhaar, bank details and proof of poor-household category."},
+
+    {"id": 4, "persona": "Family needing health insurance",
+     "query": "What government health insurance covers hospital treatment for poor families and how much does it cover?",
+     "expected_schemes": ["AB-PMJAY"],
+     "ground_truth": "Ayushman Bharat PM-JAY provides Rs 5 lakh per family per year of cashless secondary and tertiary hospitalisation cover for poor and vulnerable families identified through SECC 2011. Check eligibility at pmjay.gov.in or call 14555 and get the Ayushman card at an empanelled hospital."},
+
+    {"id": 5, "persona": "65-year-old below poverty line",
+     "query": "I am 65 and below poverty line. Is there an old age pension scheme for me?",
+     "expected_schemes": ["IGNOAPS"],
+     "ground_truth": "The Indira Gandhi National Old Age Pension Scheme (IGNOAPS) under NSAP gives a monthly pension of Rs 200 for BPL persons aged 60-79 and Rs 500 for those 80 and above. Apply through the ULB or state social welfare department with Aadhaar, age proof and BPL card."},
+
+    {"id": 6, "persona": "Parent of a young daughter",
+     "query": "I have a 5 year old daughter. Which savings scheme is best for her future?",
+     "expected_schemes": ["SSY"],
+     "ground_truth": "Sukanya Samriddhi Yojana (SSY) is a small savings scheme for a girl child below 10 years, offering a high fixed interest rate and Section 80C tax benefits, with deposits of Rs 250 to Rs 1.5 lakh per year. A guardian opens it at a post office or bank with the girl's birth certificate."},
+
+    {"id": 7, "persona": "30-year-old informal worker wanting pension",
+     "query": "I am 30 and work in the unorganised sector. How can I get a guaranteed pension after 60?",
+     "expected_schemes": ["APY"],
+     "ground_truth": "Atal Pension Yojana (APY) gives unorganised-sector workers aged 18-40 a guaranteed monthly pension of Rs 1,000 to Rs 5,000 after age 60 based on contributions. Enrol through your bank or post office savings account with Aadhaar; income-tax payers are excluded."},
+
+    {"id": 8, "persona": "Aspiring micro-entrepreneur",
+     "query": "I want to start a small business and need a loan without collateral. What scheme can help?",
+     "expected_schemes": ["PMMY"],
+     "ground_truth": "Pradhan Mantri MUDRA Yojana (PMMY) gives collateral-free loans up to Rs 10 lakh to non-farm micro enterprises in three categories: Shishu up to Rs 50,000, Kishore Rs 50,000-5 lakh, and Tarun Rs 5-10 lakh. Apply at a bank, NBFC or MFI or via Udyamimitra with Aadhaar, PAN and a business plan."},
+
+    {"id": 9, "persona": "SC woman entrepreneur setting up a factory",
+     "query": "I am a Scheduled Caste woman wanting to set up a new manufacturing unit. Is there a special bank loan scheme?",
+     "expected_schemes": ["STANDUP-INDIA"],
+     "ground_truth": "Stand-Up India facilitates bank loans between Rs 10 lakh and Rs 1 crore for SC/ST and women entrepreneurs to set up a new greenfield enterprise. Apply via the Stand-Up India portal or a bank branch with Aadhaar, PAN, caste certificate and a project report."},
+
+    {"id": 10, "persona": "Traditional carpenter",
+     "query": "I am a carpenter by trade. Does the government give tools and loans to artisans like me?",
+     "expected_schemes": ["PM-VISHWAKARMA"],
+     "ground_truth": "PM Vishwakarma supports artisans in 18 trades such as carpenter with skill training (Rs 500/day stipend), a Rs 15,000 toolkit incentive, and collateral-free credit up to Rs 1 lakh then Rs 2 lakh at 5% interest. Register at a Common Service Centre with Aadhaar and proof of trade."},
+
+    {"id": 11, "persona": "Gig delivery worker",
+     "query": "I am a gig delivery worker. How do I register with the government to get worker benefits and accident cover?",
+     "expected_schemes": ["E-SHRAM"],
+     "ground_truth": "e-Shram registers unorganised and gig workers aged 16-59 who are not in EPFO/ESIC, issuing a Universal Account Number card and accidental insurance cover of up to Rs 2 lakh. Self-register free on the e-Shram portal or at a CSC with Aadhaar and a linked mobile number."},
+
+    {"id": 12, "persona": "Worker wanting cheap accident insurance",
+     "query": "Is there a very cheap government accident insurance I can get through my bank?",
+     "expected_schemes": ["PMSBY"],
+     "ground_truth": "Pradhan Mantri Suraksha Bima Yojana (PMSBY) gives accidental death or total disability cover of Rs 2 lakh for a premium of just Rs 20 per year to anyone aged 18-70 with a savings bank account and auto-debit consent."},
+
+    {"id": 13, "persona": "Person wanting cheap life cover",
+     "query": "What is the cheapest government life insurance scheme and who can join?",
+     "expected_schemes": ["PMJJBY"],
+     "ground_truth": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) gives Rs 2 lakh life cover for death due to any reason for an annual premium of Rs 436, to people aged 18-50 with a savings bank account and auto-debit consent."},
+
+    {"id": 14, "persona": "Household without a toilet",
+     "query": "My urban home has no toilet. Does the government give money to build one?",
+     "expected_schemes": ["SBM-U"],
+     "ground_truth": "Swachh Bharat Mission - Urban 2.0 gives an incentive of up to Rs 4,000 (central share) per Individual Household Latrine to eligible urban households without a toilet. Apply through the Urban Local Body or Swachhata app with Aadhaar and proof of urban residence."},
+
+    {"id": 15, "persona": "Woman head of family in Karnataka",
+     "query": "I am the woman head of my family in Karnataka. Is there a monthly cash benefit for me?",
+     "expected_schemes": ["KA-GRUHA-LAKSHMI"],
+     "ground_truth": "Karnataka's Gruha Lakshmi scheme transfers Rs 2,000 per month to the woman listed as head of the family on the ration card, excluding families with income-tax or GST-registered members. Register via Seva Sindhu or Karnataka One centres with the ration card, Aadhaar and bank details."},
+
+    {"id": 16, "persona": "BPL family in Karnataka needing food",
+     "query": "I have a BPL ration card in Karnataka. Can I get free rice or foodgrains?",
+     "expected_schemes": ["KA-ANNA-BHAGYA"],
+     "ground_truth": "Karnataka's Anna Bhagya scheme gives free foodgrains to Antyodaya and Priority Household (BPL) ration-card holders, with an equivalent cash transfer where rice is short-supplied. Eligibility is automatic for valid BPL ration cards; collect grain at the linked Fair Price Shop."},
+
+    {"id": 17, "persona": "Urban poor woman in a self-help group",
+     "query": "I am an urban poor woman. Is there a scheme for self-help groups and self-employment training?",
+     "expected_schemes": ["DAY-NULM"],
+     "ground_truth": "DAY-NULM helps urban poor, especially women, with skill training, Self-Help Group formation and bank linkage, and interest-subsidised self-employment loans up to Rs 2 lakh (individual) or Rs 10 lakh (group), plus shelters for the homeless. Approach the City Mission Management Unit of the ULB."},
+
+    {"id": 18, "persona": "Resident wanting a water connection",
+     "query": "Which urban mission is responsible for giving households tap water and sewerage connections?",
+     "expected_schemes": ["AMRUT"],
+     "ground_truth": "AMRUT 2.0 makes cities water secure through universal water supply and sewerage coverage, giving functional household tap connections via the municipal corporation. Citizens request a tap or sewer connection at their Urban Local Body water supply department."},
+
+    {"id": 19, "persona": "Citizen wanting digital government services",
+     "query": "How can I access government documents and services online without visiting offices?",
+     "expected_schemes": ["DIGITAL-INDIA"],
+     "ground_truth": "The Digital India programme delivers services digitally via the UMANG app (1,700+ services), DigiLocker for secure documents, and 5 lakh+ Common Service Centres. Register on UMANG or DigiLocker with an Aadhaar-linked mobile number or visit a nearby CSC."},
+
+    {"id": 20, "persona": "Citizen curious about the Smart Cities Mission",
+     "query": "What is the Smart Cities Mission and what services does it provide to residents?",
+     "expected_schemes": ["SCM"],
+     "ground_truth": "The Smart Cities Mission improves quality of life in 100 selected cities through area-based development and smart solutions like integrated command and control centres, smart mobility, e-governance and public Wi-Fi, delivered by the city Special Purpose Vehicle. There is no individual enrolment."}
+  ]
+}

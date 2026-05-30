@@ -1,0 +1,13 @@
+# virtualenv & caches
+.venv/
+__pycache__/
+*.pyc
+
+# regenerable FAISS index (rebuild with: python -m src.ingest)
+index/
+
+# secrets / local config
+.env
+
+# scratch
+*.log
